@@ -13,14 +13,18 @@ html, body{
 }
 
 /* LOADING */
-@keyframes translateBackgroundP {
+/* @keyframes translateBackgroundP {
 	from { background-position: 0 0; }
 	to { background-position: 650px 0; }
+} */
+@keyframes translateBackgroundN {
+    from { -webkit-transform-: translateX(0);}
+    to { -webkit-transform: translateX(-673px);}
 }
 
- @keyframes translateBackgroundN {
-	from { background-position: 0 0; }
-	to { background-position: -650px 0; }
+@keyframes translateBackgroundP {
+    from { -webkit-transform-: translateX(-673px); }
+    to { -webkit-transform: translateX(0);}
 }
 
 .loading{
@@ -32,29 +36,24 @@ html, body{
     background-color: #000;
 }
 
-.line{
-    width: 100%;
+.loading div{
+    width: 200%;
     height: 100px;
-    background-image: url("assets/img/loadingoftorpille.png");
     background-size: contain;
-    background-repeat: repeat-x;
+    background-repeat: repeat-x;   
 }
 
-.loading .line:nth-child(2n){
-    transform: skew(-20deg);  
+.loading div:nth-of-type(2n + 1){
+    background-image: url("assets/img/loadingN.png");
+    animation: translateBackgroundN 5s linear infinite; 
 }
 
-.loading .line:nth-child(2n+1){
-    transform: skew(20deg);  
+.loading div:nth-of-type(2n){
+    transform: translateX(-1346px);
+    background-image: url("assets/img/loadingP.png");
+    animation: translateBackgroundP 10s linear infinite; 
 }
 
-.lineP{
-    /* animation: translateBackgroundP 5s linear infinite;  */
-}
-
-.lineN{
-    /* animation: translateBackgroundN 5s linear infinite;  */
-} 
 
 /* SMALL DEVICES */
 .smallDevices{
