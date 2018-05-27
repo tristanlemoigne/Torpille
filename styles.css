@@ -18,7 +18,7 @@ html, body{
 	to { background-position: 650px 0; }
 }
 
-@keyframes translateBackgroundN {
+ @keyframes translateBackgroundN {
 	from { background-position: 0 0; }
 	to { background-position: -650px 0; }
 }
@@ -40,18 +40,23 @@ html, body{
     background-repeat: repeat-x;
 }
 
+.loading .line:nth-child(2n){
+    transform: skew(-20deg);  
+}
+
+.loading .line:nth-child(2n+1){
+    transform: skew(20deg);  
+}
+
 .lineP{
-    animation: translateBackgroundP 5s linear infinite; 
-    transform: skew(-20deg);
+    /* animation: translateBackgroundP 5s linear infinite;  */
 }
 
 .lineN{
-    animation: translateBackgroundN 5s linear infinite; 
-    transform: skew(20deg);    
-}
+    /* animation: translateBackgroundN 5s linear infinite;  */
+} 
 
 /* SMALL DEVICES */
-
 .smallDevices{
     display: none;
     position: absolute;
