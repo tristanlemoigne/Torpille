@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Torpille</title>
+    <link rel="icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+<body>
+    <!-- LOADING -->
+    <div class="loading">
+        <div class="line lineP"></div>
+        <div class="line lineN"></div>
+        <div class="line lineP"></div>
+        <div class="line lineN"></div>
+        <div class="line lineP"></div>
+        <div class="line lineN"></div>
+        <div class="line lineP"></div>
+        <div class="line lineN"></div>
+        <div class="line lineP"></div>
+        <div class="line lineN"></div>
+        <div class="line lineP"></div>
+        <div class="line lineN"></div>
+        <div class="line lineP"></div>
+    </div>
+
+    <!-- USER INTERFACE -->
+    <div class="play">
+        <div class="flexBox">
+            <div>
+                <h1>MISSION NAME</h1>
+                <p>torpille</p>
+            </div>
+
+            <div>
+                <h1>TEMPERATURE</h1>
+                <p>
+                    <span class="number">122</span> degrees</p>
+            </div>
+
+            <div>
+                <h1>SONG NAME</h1>
+                <p>opus
+                    <span class="author">by eric prydz</span>
+                </p>
+            </div>
+        </div>
+
+        <a class="playButton" href="">PLAY GAME
+            <span>►►►</span>
+        </a>
+
+        <div class="authors">
+            DESIGNER :
+            <a href="https://www.augustinstephan.com/" target="_blank">Augustin Stephan</a>
+            <br /> DEVELOPER :
+            <a href="https://www.tristanlemoigne.fr/" target="_blank">Tristan Le Moigne</a>
+        </div>
+    </div>
+
+    <!-- DEVICES < 800px -->
+    <div class="smallDevices">
+        <div>
+            <img src="assets/img/smallDevices.gif" alt="">
+            <h1>Please, enlarge your screen</h1>
+        </div>
+    </div>
+
+    <!-- IN GAME -->
+    <div class="ingame">
+        <div class="scores">
+            HIGHSCORE :
+            <span class="highscore"></span>
+            <br /> SCORE :
+            <span class="currentScore"></span>
+        </div>
+
+        <div class="launch">
+            <!-- <span>LAUNCH</span>   -->
+            <span class="countdown">3</span>
+            <img src="assets/img/circle.png" alt="">
+
+            <p class="instructions">
+                <span class="preparation">ship preparation</span>
+                <br />
+                <span class="crew">crew installation</span>
+                <br />
+                <span class="reactors">reactors ignition</span>
+                <br />
+                <span class="launchShip">launch</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- LIBRAIRIES -->
+    <script type="text/javascript" src="./lib/three.min.js"></script>
+    <script type="text/javascript" src="./lib/inflate.min.js"></script>
+    <script type="text/javascript" src="./lib/fbxloader.js"></script>
+
+    <!-- CODE -->
+    <script type="text/javascript" src="./app.js"></script>
+    <script type="text/javascript" src="./score.js"></script>
+</body>
+
+</html>
